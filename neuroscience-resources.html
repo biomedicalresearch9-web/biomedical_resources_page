@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neuroscience Resources</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Calibri:wght@400;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#bf937c;--brand-light:#ede0d8;--brand-muted:#d4b4a4;--sage:#989885;--sage-light:#e4e4dc;--bg:#faf7f4;--text:#111;--text-muted:#555;--text-subtle:#888;--border:#ddd8d2;--card:#fff}
+body{font-family:'Calibri',Calibri,sans-serif;background:var(--bg);color:var(--text);line-height:1.25}
+.pw{max-width:900px;margin:0 auto;padding:2rem 1.5rem}
+.bc{font-size:12px;color:var(--text-subtle);margin-bottom:.75rem}
+.bc span{color:var(--text-muted)}
+.ph-title{font-size:24px;font-weight:700;color:var(--text);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.ph-title i{color:var(--brand);font-size:26px}
+.ph-sub{font-size:14px;color:var(--text-muted);margin-bottom:.75rem;line-height:1.25}
+.ph-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:2rem}
+.ph-tag{font-size:11px;padding:3px 10px;background:var(--sage-light);border-radius:10px;color:var(--sage);border:1px solid #ccccc0}
+hr{border:none;border-top:1px solid var(--border);margin:2rem 0}
+.sn{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--sage);margin-bottom:.3rem}
+.st{font-size:20px;font-weight:700;color:var(--text);margin-bottom:.3rem}
+.sd{font-size:13px;color:var(--text-muted);margin-bottom:1rem;line-height:1.25}
+.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:1rem}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:1rem}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.9rem 1rem}
+.ch{font-size:12px;font-weight:700;color:var(--brand);margin-bottom:8px;display:flex;align-items:center;gap:5px;line-height:1.25}
+.ch i{font-size:14px}
+ul.fl{list-style:none}
+ul.fl li{font-size:11.5px;padding:3.5px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:5px;line-height:1.25}
+ul.fl li:last-child{border-bottom:none}
+ul.fl li a{color:var(--brand);text-decoration:none}
+ul.fl li a:hover{text-decoration:underline}
+ul.fl li i{font-size:10px;color:var(--text-subtle);flex-shrink:0}
+.db-link{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--brand);padding:3.5px 0;text-decoration:none;line-height:1.25}
+.db-link:hover{text-decoration:underline}
+.db-link i{font-size:11px;flex-shrink:0}
+.db-desc{font-size:11px;color:var(--text-subtle);margin-left:17px;margin-bottom:2px;line-height:1.25}
+.ch4{font-size:13px;font-weight:700;color:var(--text);margin-bottom:8px;display:flex;align-items:center;gap:5px;line-height:1.25}
+.ch4 i{color:var(--brand)}
+ul.cl{list-style:none}
+ul.cl li{font-size:12px;color:var(--text-muted);padding:4px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:6px;line-height:1.25}
+ul.cl li:last-child{border-bottom:none}
+.sage-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--sage);margin-top:4px;flex-shrink:0}
+.li-sub{font-size:11px;color:var(--text-subtle);line-height:1.25}
+.ep{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-top:6px}
+.eb{font-size:11px;padding:3px 9px;background:var(--brand-light);border-radius:10px;color:var(--brand);border:1px solid var(--brand-muted)}
+.as{font-size:10px;color:var(--text-subtle)}
+.ep-note{font-size:11px;color:var(--text-subtle);margin-top:8px;line-height:1.25}
+.ri{display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px solid var(--border)}
+.ri:last-child{border-bottom:none}
+.ric{width:28px;height:28px;border-radius:6px;background:var(--brand-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--brand);font-size:14px}
+.ric.sage{background:var(--sage-light);color:var(--sage)}
+.rt{font-size:12px;color:var(--text-muted);line-height:1.25}
+.rs{font-size:11px;color:var(--text-subtle);line-height:1.25}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:1rem}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.85rem 1rem}
+.stat-num{font-size:20px;font-weight:700;color:var(--brand);line-height:1.1;margin-bottom:2px}
+.stat-label{font-size:11px;color:var(--text-muted);line-height:1.25}
+.sub-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--sage);margin:1rem 0 .4rem}
+.pill-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:.75rem}
+.pill{font-size:11px;padding:3px 10px;background:var(--sage-light);border-radius:10px;color:var(--sage);border:1px solid #ccccc0}
+@media(max-width:700px){.grid5,.grid3{grid-template-columns:1fr 1fr}.stat-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.grid5,.grid3,.stat-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="pw">
+
+  <div class="bc">Neuroscience <span>/ Resources</span></div>
+  <div class="ph-title"><i class="ti ti-brain"></i> Neuroscience resources</div>
+  <div class="ph-sub">Everything you need to learn, research, and build a career in neuroscience — from neurons and neurotransmitters to brain imaging, neurodegeneration, and cognitive science.</div>
+  <div class="ph-tags">
+    <span class="ph-tag">Neurons</span>
+    <span class="ph-tag">Neurotransmitters</span>
+    <span class="ph-tag">Brain regions</span>
+    <span class="ph-tag">Neurodegeneration</span>
+    <span class="ph-tag">Synaptic plasticity</span>
+    <span class="ph-tag">Brain imaging</span>
+    <span class="ph-tag">Alzheimer's</span>
+    <span class="ph-tag">Neural circuits</span>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-num">86B</div><div class="stat-label">neurons in the average human brain</div></div>
+    <div class="stat-card"><div class="stat-num">1 in 6</div><div class="stat-label">people globally affected by neurological disorders (WHO)</div></div>
+    <div class="stat-card"><div class="stat-num">55M</div><div class="stat-label">people worldwide living with dementia</div></div>
+    <div class="stat-card"><div class="stat-num">$6.2B</div><div class="stat-label">NIH neuroscience research budget in 2023</div></div>
+  </div>
+
+  <hr>
+
+  <div class="sn">Section 1</div>
+  <div class="st">Learn the fundamentals</div>
+  <div class="sd">New to neuroscience? Each topic links to vetted external resources — from beginner-friendly introductions to detailed scientific literature.</div>
+  <div class="grid5">
+    <div class="card">
+      <div class="ch"><i class="ti ti-topology-star"></i> Neurons</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.khanacademy.org/science/ap-biology/cell-communication-and-cell-cycle/nervous-system/a/neuron-structure" target="_blank">Khan Academy: Neurons</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/books/NBK10866/" target="_blank">NCBI: Neuron structure</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Neurons" target="_blank">Osmosis: Neurons</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ninds.nih.gov/health-information/public-education/brain-basics/brain-basics-know-your-brain" target="_blank">NINDS: Brain basics</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-molecule"></i> Neurotransmitters</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.khanacademy.org/science/health-and-medicine/nervous-system-and-sensory-infor/neurotransmitters" target="_blank">Khan Academy: NT</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/books/NBK538137/" target="_blank">NCBI: Neurotransmitters</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Neurotransmitters" target="_blank">Osmosis: NT</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.simplypsychology.org/neurotransmitters.html" target="_blank">Simply Psychology</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-brain"></i> Brain regions</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.ninds.nih.gov/health-information/public-education/brain-basics/brain-basics-know-your-brain" target="_blank">NINDS: Brain map</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.kenhub.com/en/library/anatomy/brain" target="_blank">Kenhub: Brain anatomy</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Brain_anatomy" target="_blank">Osmosis: Brain anatomy</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://human.biodigital.com/explore/nervous-system" target="_blank">BioDigital 3D Brain</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-activity-heartbeat"></i> Neurodegeneration</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.ninds.nih.gov/health-information/disorders/neurodegenerative-diseases" target="_blank">NINDS: Neurodegeneration</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5991626/" target="_blank">NCBI: Mechanisms review</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Neurodegenerative_diseases" target="_blank">Osmosis: Neurodegeneration</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.mayoclinic.org/diseases-conditions/alzheimers-disease/symptoms-causes/syc-20350447" target="_blank">Mayo Clinic: Alzheimer's</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-book"></i> Neuroscience glossary</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.ninds.nih.gov/health-information/disorders" target="_blank">NINDS disorder list</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.brainfacts.org/glossary" target="_blank">BrainFacts.org glossary</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.apa.org/research/action/glossary" target="_blank">APA: Psychology glossary</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sub-label">More topics to explore</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ch"><i class="ti ti-arrows-transfer-up"></i> Synaptic plasticity & learning</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3368251/" target="_blank">NCBI: Synaptic plasticity</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Synaptic_plasticity" target="_blank">Osmosis: Plasticity</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.brainfacts.org/thinking-sensing-and-behaving/learning-and-memory" target="_blank">BrainFacts: Learning</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.khanacademy.org/science/health-and-medicine/nervous-system/synaptic-transmission" target="_blank">Khan Academy: Synapses</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-scan"></i> Brain imaging</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.ninds.nih.gov/health-information/public-education/brain-basics/brain-basics-life-and-death-neuron" target="_blank">NINDS: Imaging overview</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3096185/" target="_blank">NCBI: fMRI & neuroimaging</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.radiologyinfo.org/en/info/mri-brain" target="_blank">RadiologyInfo: Brain MRI</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.humanconnectome.org/" target="_blank">Human Connectome Project</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-mood-nervous"></i> Mental health & the brain</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.nimh.nih.gov/health/topics/brain-basics" target="_blank">NIMH: Brain & mental health</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4476963/" target="_blank">NCBI: Depression neuroscience</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Depression" target="_blank">Osmosis: Depression</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.brainfacts.org/diseases-and-disorders" target="_blank">BrainFacts: Brain disorders</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="sn">Section 2</div>
+  <div class="st">Databases & research tools</div>
+  <div class="sd">Platforms for finding neuroscience literature, brain atlases, imaging data, and open datasets.</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ch4">General research</div>
+      <a class="db-link" href="https://pubmed.ncbi.nlm.nih.gov/?term=neuroscience" target="_blank"><i class="ti ti-external-link"></i>PubMed — neuroscience</a>
+      <div class="db-desc">Search peer-reviewed neuroscience literature</div>
+      <a class="db-link" href="https://scholar.google.com/" target="_blank"><i class="ti ti-external-link"></i>Google Scholar</a>
+      <div class="db-desc">Broad academic search across journals</div>
+      <a class="db-link" href="https://clinicaltrials.gov/search?cond=neurological" target="_blank"><i class="ti ti-external-link"></i>ClinicalTrials.gov — neurological</a>
+      <div class="db-desc">Active and completed neuroscience trials</div>
+      <a class="db-link" href="https://www.cochranelibrary.com/" target="_blank"><i class="ti ti-external-link"></i>Cochrane Library</a>
+      <div class="db-desc">Systematic reviews on brain and behavior</div>
+    </div>
+    <div class="card">
+      <div class="ch4">Neuroscience-specific</div>
+      <a class="db-link" href="https://www.ninds.nih.gov/" target="_blank"><i class="ti ti-external-link"></i>NINDS</a>
+      <div class="db-desc">NIH institute for neurological disorders and stroke</div>
+      <a class="db-link" href="https://www.nimh.nih.gov/" target="_blank"><i class="ti ti-external-link"></i>NIMH</a>
+      <div class="db-desc">NIH institute for mental health research</div>
+      <a class="db-link" href="https://www.brainfacts.org/" target="_blank"><i class="ti ti-external-link"></i>BrainFacts.org</a>
+      <div class="db-desc">Public neuroscience education from SfN</div>
+      <a class="db-link" href="https://www.jneurosci.org/" target="_blank"><i class="ti ti-external-link"></i>Journal of Neuroscience</a>
+      <div class="db-desc">Leading peer-reviewed neuroscience journal</div>
+    </div>
+    <div class="card">
+      <div class="ch4">Brain atlases & open data</div>
+      <a class="db-link" href="https://atlas.brain-map.org/" target="_blank"><i class="ti ti-external-link"></i>Allen Brain Atlas</a>
+      <div class="db-desc">Gene expression maps of the human brain</div>
+      <a class="db-link" href="https://www.humanconnectome.org/" target="_blank"><i class="ti ti-external-link"></i>Human Connectome Project</a>
+      <div class="db-desc">High-resolution brain connectivity data</div>
+      <a class="db-link" href="https://openneuro.org/" target="_blank"><i class="ti ti-external-link"></i>OpenNeuro</a>
+      <div class="db-desc">Free neuroimaging dataset repository</div>
+      <a class="db-link" href="https://www.kaggle.com/datasets?search=brain" target="_blank"><i class="ti ti-external-link"></i>Kaggle — brain datasets</a>
+      <div class="db-desc">Open datasets for neuroscience modeling</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="sn">Section 3</div>
+  <div class="st">Career exploration</div>
+  <div class="sd">Neuroscience spans clinical neurology, psychiatry, cognitive science, AI research, and biotech — one of the most interdisciplinary fields in biomedicine.</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ch4"><i class="ti ti-stethoscope"></i> Clinical careers</div>
+      <ul class="cl">
+        <li><span class="sage-dot"></span><div><div>Neurologist</div><div class="li-sub">Diagnoses and treats disorders of the nervous system</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Neurosurgeon</div><div class="li-sub">Performs surgery on the brain, spine, and peripheral nerves</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Psychiatrist</div><div class="li-sub">Treats mental illness with biological and psychological approaches</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Neuropsychologist</div><div class="li-sub">Assesses cognitive function and brain-behavior relationships</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Epileptologist</div><div class="li-sub">Sub-specializes in seizure disorders</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Neuro-oncologist</div><div class="li-sub">Treats brain and spinal cord tumors</div></div></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-microscope"></i> Research & science careers</div>
+      <ul class="cl">
+        <li><span class="sage-dot"></span><div><div>Neuroscientist / Research Scientist</div><div class="li-sub">Studies brain circuits, cells, and behavior</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Computational Neuroscientist</div><div class="li-sub">Models brain function using math and machine learning</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Neuroimaging Scientist</div><div class="li-sub">Analyzes fMRI, EEG, and connectome data</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Neurogenetics Researcher</div><div class="li-sub">Studies genetic basis of neurological disorders</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Pharmaceutical Neuroscientist</div><div class="li-sub">Develops drugs for Alzheimer's, depression, Parkinson's</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Neuroethicist</div><div class="li-sub">Examines ethical implications of neurotechnology</div></div></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-school"></i> Education pathway</div>
+      <div class="ep">
+        <span class="eb">Bachelor's (4 yrs)</span><span class="as">→</span>
+        <span class="eb">MD or PhD (4 yrs)</span><span class="as">→</span>
+        <span class="eb">Residency (4–7 yrs)</span><span class="as">→</span>
+        <span class="eb">Fellowship (1–2 yrs)</span>
+      </div>
+      <div class="ep-note">Clinical track: Neurology residency is 4 years (PGY1 internship + 3 yrs neurology). Neurosurgery is 7 years. Sub-specialties (epilepsy, neuro-oncology) add a fellowship.</div>
+      <div class="ep-note" style="margin-top:6px">Research track: PhD in neuroscience, biology, or psychology, followed by a postdoctoral fellowship. Computational track may include computer science or applied math.</div>
+      <div class="sub-label" style="margin-top:10px">Recommended undergrad majors</div>
+      <div class="pill-row">
+        <span class="pill">Neuroscience</span>
+        <span class="pill">Biology</span>
+        <span class="pill">Psychology</span>
+        <span class="pill">Computer Science</span>
+        <span class="pill">Biochemistry</span>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="sn">Section 4</div>
+  <div class="st">Recommended learning</div>
+  <div class="sd">Curated videos, books, podcasts, and online courses on neuroscience for every level.</div>
+
+  <div class="sub-label">Videos & channels</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ch4"><i class="ti ti-brand-youtube"></i> Beginner-friendly</div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">TED-Ed — How does the brain work?</div><div class="rs">Short animated overviews of brain function</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">Khan Academy — Neuroscience</div><div class="rs">Free structured course on neurons and the brain</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">BrainFacts.org video library</div><div class="rs">Short expert-led clips on brain science</div></div></div>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-brand-youtube"></i> Intermediate / clinical</div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">Osmosis — Neuroscience playlist</div><div class="rs">Pathophysiology of neurological diseases</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">Ninja Nerd — Neurology series</div><div class="rs">Detailed lecture-style neuroscience</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">2-Minute Neuroscience</div><div class="rs">Bite-sized explanations of neuroscience concepts</div></div></div>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-device-laptop"></i> Online courses</div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-certificate"></i></div><div><div class="rt">Coursera — Computational Neuroscience (UW)</div><div class="rs">Mathematical modeling of the brain</div></div></div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-certificate"></i></div><div><div class="rt">edX — Fundamentals of Neuroscience (Harvard)</div><div class="rs">Three-part free course from Harvard</div></div></div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-certificate"></i></div><div><div class="rt">MIT OpenCourseWare — Brain & Cognitive Sciences</div><div class="rs">Free lecture notes and problem sets</div></div></div>
+    </div>
+  </div>
+
+  <div class="sub-label">Books & podcasts</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ch4"><i class="ti ti-book"></i> For general readers</div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">The Brain That Changes Itself — Norman Doidge</div><div class="rs">Neuroplasticity stories that reshaped the field</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">The Tell-Tale Brain — V.S. Ramachandran</div><div class="rs">Case studies revealing how the brain works</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">Behave — Robert Sapolsky</div><div class="rs">Biology of human behavior and the brain</div></div></div>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-book"></i> For students & researchers</div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">Principles of Neural Science — Kandel et al.</div><div class="rs">The definitive neuroscience textbook</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">Neuroscience — Purves et al.</div><div class="rs">Comprehensive undergraduate-level text</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">Theoretical Neuroscience — Dayan & Abbott</div><div class="rs">Mathematical models of neural computation</div></div></div>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-headphones"></i> Podcasts</div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-headphones"></i></div><div><div class="rt">Huberman Lab</div><div class="rs">Neuroscience and performance science for general audience</div></div></div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-headphones"></i></div><div><div class="rt">Brain Science with Ginger Campbell</div><div class="rs">Deep dives with neuroscience researchers</div></div></div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-headphones"></i></div><div><div class="rt">Ologies — Neurology episodes</div><div class="rs">Fun, accessible interviews with scientists</div></div></div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-headphones"></i></div><div><div class="rt">NINDS Podcast</div><div class="rs">Research updates on neurological disorders</div></div></div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html> 
