@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cardiology Resources</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Calibri:wght@400;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --brand:#bf937c;
+  --brand-light:#ede0d8;
+  --brand-muted:#d4b4a4;
+  --sage:#989885;
+  --sage-light:#e4e4dc;
+  --bg:#faf7f4;
+  --text:#111;
+  --text-muted:#555;
+  --text-subtle:#888;
+  --border:#ddd8d2;
+  --card:#fff;
+}
+body{font-family:'Calibri',Calibri,sans-serif;background:var(--bg);color:var(--text);line-height:1.25}
+.pw{max-width:900px;margin:0 auto;padding:2rem 1.5rem}
+.bc{font-size:12px;color:var(--text-subtle);margin-bottom:.75rem}
+.bc span{color:var(--text-muted)}
+.ph-title{font-size:24px;font-weight:700;color:var(--text);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.ph-title i{color:var(--brand);font-size:26px}
+.ph-sub{font-size:14px;color:var(--text-muted);margin-bottom:.75rem;line-height:1.25}
+.ph-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:2rem}
+.ph-tag{font-size:11px;padding:3px 10px;background:var(--sage-light);border-radius:10px;color:var(--sage);border:1px solid #ccccc0}
+hr{border:none;border-top:1px solid var(--border);margin:2rem 0}
+.sn{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--sage);margin-bottom:.3rem}
+.st{font-size:20px;font-weight:700;color:var(--text);margin-bottom:.3rem}
+.sd{font-size:13px;color:var(--text-muted);margin-bottom:1rem;line-height:1.25}
+.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:1rem}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:1rem}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:1rem}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.9rem 1rem}
+.ch{font-size:12px;font-weight:700;color:var(--brand);margin-bottom:8px;display:flex;align-items:center;gap:5px;line-height:1.25}
+.ch i{font-size:14px}
+ul.fl{list-style:none}
+ul.fl li{font-size:11.5px;padding:3.5px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:5px;line-height:1.25}
+ul.fl li:last-child{border-bottom:none}
+ul.fl li a{color:var(--brand);text-decoration:none}
+ul.fl li a:hover{text-decoration:underline}
+ul.fl li i{font-size:10px;color:var(--text-subtle);flex-shrink:0}
+.db-link{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--brand);padding:3.5px 0;text-decoration:none;line-height:1.25}
+.db-link:hover{text-decoration:underline}
+.db-link i{font-size:11px;flex-shrink:0}
+.db-desc{font-size:11px;color:var(--text-subtle);margin-left:17px;margin-bottom:2px;line-height:1.25}
+.ch4{font-size:13px;font-weight:700;color:var(--text);margin-bottom:8px;display:flex;align-items:center;gap:5px;line-height:1.25}
+.ch4 i{color:var(--brand)}
+ul.cl{list-style:none}
+ul.cl li{font-size:12px;color:var(--text-muted);padding:4px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:6px;line-height:1.25}
+ul.cl li:last-child{border-bottom:none}
+.sage-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--sage);margin-top:4px;flex-shrink:0}
+.li-sub{font-size:11px;color:var(--text-subtle);line-height:1.25}
+.ep{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-top:6px}
+.eb{font-size:11px;padding:3px 9px;background:var(--brand-light);border-radius:10px;color:var(--brand);border:1px solid var(--brand-muted)}
+.as{font-size:10px;color:var(--text-subtle)}
+.ep-note{font-size:11px;color:var(--text-subtle);margin-top:8px;line-height:1.25}
+.ri{display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px solid var(--border)}
+.ri:last-child{border-bottom:none}
+.ric{width:28px;height:28px;border-radius:6px;background:var(--brand-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--brand);font-size:14px}
+.ric.sage{background:var(--sage-light);color:var(--sage)}
+.rt{font-size:12px;color:var(--text-muted);line-height:1.25}
+.rs{font-size:11px;color:var(--text-subtle);line-height:1.25}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:1rem}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.85rem 1rem}
+.stat-num{font-size:20px;font-weight:700;color:var(--brand);line-height:1.1;margin-bottom:2px}
+.stat-label{font-size:11px;color:var(--text-muted);line-height:1.25}
+.sub-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--sage);margin:1rem 0 .4rem}
+.pill-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:.75rem}
+.pill{font-size:11px;padding:3px 10px;background:var(--sage-light);border-radius:10px;color:var(--sage);border:1px solid #ccccc0}
+@media(max-width:700px){.grid5,.grid3{grid-template-columns:1fr 1fr}.stat-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.grid5,.grid3,.grid2,.stat-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="pw">
+
+  <div class="bc">Cardiology <span>/ Resources</span></div>
+  <div class="ph-title"><i class="ti ti-heart"></i> Cardiology resources</div>
+  <div class="ph-sub">Everything you need to learn, research, and build a career in cardiovascular medicine and science. Use the sections below to explore foundational concepts, find research tools, discover career paths, and access curated learning materials.</div>
+  <div class="ph-tags">
+    <span class="ph-tag">Heart anatomy</span>
+    <span class="ph-tag">Cardiac cycle</span>
+    <span class="ph-tag">Blood pressure</span>
+    <span class="ph-tag">Atherosclerosis</span>
+    <span class="ph-tag">Arrhythmia</span>
+    <span class="ph-tag">Heart failure</span>
+    <span class="ph-tag">ECG</span>
+    <span class="ph-tag">Clinical trials</span>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-num">17.9M</div><div class="stat-label">deaths per year globally from cardiovascular disease (WHO)</div></div>
+    <div class="stat-card"><div class="stat-num">#1</div><div class="stat-label">leading cause of death worldwide for over 30 years</div></div>
+    <div class="stat-card"><div class="stat-num">32%</div><div class="stat-label">of all global deaths are attributed to heart disease</div></div>
+    <div class="stat-card"><div class="stat-num">$219B</div><div class="stat-label">annual cost of heart disease to the US economy (CDC)</div></div>
+  </div>
+
+  <hr>
+
+  <div class="sn">Section 1</div>
+  <div class="st">Learn the fundamentals</div>
+  <div class="sd">New to cardiology? Each topic links to vetted external resources — from beginner overviews to deeper clinical reading.</div>
+  <div class="grid5">
+    <div class="card">
+      <div class="ch"><i class="ti ti-heart"></i> Heart anatomy</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.kenhub.com/en/library/anatomy/the-heart" target="_blank">Kenhub overview</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.heart.org/en/health-topics/heart-attack/about-heart-attacks/heart-anatomy" target="_blank">AHA anatomy</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Heart" target="_blank">Osmosis: Heart</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/books/NBK459282/" target="_blank">NCBI: Cardiac anatomy</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-activity"></i> Cardiac cycle</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.khanacademy.org/science/health-and-medicine/circulatory-system" target="_blank">Khan Academy</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Cardiac_cycle" target="_blank">Osmosis: Cycle</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/books/NBK459198/" target="_blank">NCBI physiology</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://teachmephysiology.com/cardiovascular-system/cardiac-cycle/" target="_blank">TeachMePhysiology</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-gauge"></i> Blood pressure</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.heart.org/en/health-topics/high-blood-pressure" target="_blank">AHA: BP facts</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.cdc.gov/bloodpressure/index.htm" target="_blank">CDC: Hypertension</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Hypertension" target="_blank">Osmosis: HTN</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.nhlbi.nih.gov/health/high-blood-pressure" target="_blank">NHLBI: High BP</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-clipboard-heart"></i> Atherosclerosis</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.nhlbi.nih.gov/health/atherosclerosis" target="_blank">NHLBI guide</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Atherosclerosis" target="_blank">Osmosis: Athero</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/books/NBK507799/" target="_blank">NCBI pathophys</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.mayoclinic.org/diseases-conditions/arteriosclerosis-atherosclerosis/symptoms-causes/syc-20350569" target="_blank">Mayo Clinic</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-book"></i> Glossary</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.heart.org/en/health-topics/consumer-healthcare/glossary-of-cardiovascular-terms" target="_blank">AHA glossary</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.acc.org/tools-and-practice-support/clinical-toolkits/heart-failure-practice-solutions/glossary-of-terms" target="_blank">ACC glossary</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.nhlbi.nih.gov/health/heart" target="_blank">NHLBI heart topics</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sub-label">More topics to explore</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ch"><i class="ti ti-wave-sine"></i> Arrhythmia & ECG</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.heart.org/en/health-topics/arrhythmia" target="_blank">AHA: Arrhythmia</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://litfl.com/ecg-library/" target="_blank">LITFL ECG library</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Arrhythmias" target="_blank">Osmosis: Arrhythmia</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://ecgwaves.com/" target="_blank">ECGwaves.com</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-heart-broken"></i> Heart failure</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.heart.org/en/health-topics/heart-failure" target="_blank">AHA: Heart failure</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.nhlbi.nih.gov/health/heart-failure" target="_blank">NHLBI: Heart failure</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Heart_failure" target="_blank">Osmosis: HF</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.mayoclinic.org/diseases-conditions/heart-failure/symptoms-causes/syc-20373142" target="_blank">Mayo Clinic: HF</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-bolt"></i> Myocardial infarction</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.heart.org/en/health-topics/heart-attack" target="_blank">AHA: Heart attack</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/books/NBK537076/" target="_blank">NCBI: MI overview</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Myocardial_infarction" target="_blank">Osmosis: MI</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.mayoclinic.org/diseases-conditions/heart-attack/symptoms-causes/syc-20373106" target="_blank">Mayo Clinic: MI</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="sn">Section 2</div>
+  <div class="st">Databases & research tools</div>
+  <div class="sd">Platforms for finding cardiovascular literature, clinical trials, population data, and imaging resources.</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ch4">General research</div>
+      <a class="db-link" href="https://pubmed.ncbi.nlm.nih.gov/?term=cardiology" target="_blank"><i class="ti ti-external-link"></i>PubMed — cardiology</a>
+      <div class="db-desc">Search peer-reviewed cardiovascular literature</div>
+      <a class="db-link" href="https://scholar.google.com/" target="_blank"><i class="ti ti-external-link"></i>Google Scholar</a>
+      <div class="db-desc">Broad academic search across journals</div>
+      <a class="db-link" href="https://clinicaltrials.gov/search?cond=cardiovascular" target="_blank"><i class="ti ti-external-link"></i>ClinicalTrials.gov</a>
+      <div class="db-desc">Find active and completed cardiac trials</div>
+      <a class="db-link" href="https://www.cochranelibrary.com/" target="_blank"><i class="ti ti-external-link"></i>Cochrane Library</a>
+      <div class="db-desc">Systematic reviews and meta-analyses</div>
+    </div>
+    <div class="card">
+      <div class="ch4">Cardiology-specific</div>
+      <a class="db-link" href="https://www.heart.org/" target="_blank"><i class="ti ti-external-link"></i>American Heart Association</a>
+      <div class="db-desc">Guidelines, statistics, and education</div>
+      <a class="db-link" href="https://www.nhlbi.nih.gov/" target="_blank"><i class="ti ti-external-link"></i>NHLBI</a>
+      <div class="db-desc">NIH institute for heart, lung, and blood</div>
+      <a class="db-link" href="https://www.acc.org/" target="_blank"><i class="ti ti-external-link"></i>American College of Cardiology</a>
+      <div class="db-desc">Clinical guidelines and cardiology news</div>
+      <a class="db-link" href="https://www.ahajournals.org/" target="_blank"><i class="ti ti-external-link"></i>AHA Journals</a>
+      <div class="db-desc">Circulation, JAHA, Hypertension & more</div>
+    </div>
+    <div class="card">
+      <div class="ch4">Data & imaging</div>
+      <a class="db-link" href="https://www.cdc.gov/heartdisease/data_statistics.htm" target="_blank"><i class="ti ti-external-link"></i>CDC Heart Disease Data</a>
+      <div class="db-desc">US prevalence, mortality, and risk data</div>
+      <a class="db-link" href="https://www.who.int/health-topics/cardiovascular-diseases" target="_blank"><i class="ti ti-external-link"></i>WHO CVD statistics</a>
+      <div class="db-desc">Global cardiovascular burden data</div>
+      <a class="db-link" href="https://www.kaggle.com/datasets?search=heart" target="_blank"><i class="ti ti-external-link"></i>Kaggle — heart datasets</a>
+      <div class="db-desc">Open datasets for research and modeling</div>
+      <a class="db-link" href="https://www.cardiacatlas.org/" target="_blank"><i class="ti ti-external-link"></i>Cardiac Atlas Project</a>
+      <div class="db-desc">Cardiac imaging and shape modeling data</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="sn">Section 3</div>
+  <div class="st">Career exploration</div>
+  <div class="sd">From clinical practice to research and public health — cardiology offers a wide range of career directions.</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ch4"><i class="ti ti-stethoscope"></i> Clinical careers</div>
+      <ul class="cl">
+        <li><span class="sage-dot"></span><div><div>Medical Cardiologist</div><div class="li-sub">Diagnoses and treats heart disease non-surgically</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Interventional Cardiologist</div><div class="li-sub">Performs catheterizations, stents, angioplasty</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Electrophysiologist</div><div class="li-sub">Specializes in heart rhythm and arrhythmia</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Cardiovascular Surgeon</div><div class="li-sub">Open-heart surgery, bypass, valve repair</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Cardiac Nurse Practitioner</div><div class="li-sub">Advanced practice in cardiac care settings</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Cardiac Sonographer</div><div class="li-sub">Performs echocardiograms and imaging studies</div></div></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-microscope"></i> Research & science careers</div>
+      <ul class="cl">
+        <li><span class="sage-dot"></span><div><div>Cardiovascular Researcher</div><div class="li-sub">Investigates disease mechanisms and treatments</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Physician-Scientist (MD/PhD)</div><div class="li-sub">Bridges clinical practice and lab research</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Biomedical Engineer</div><div class="li-sub">Develops cardiac devices, stents, pacemakers</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Cardiovascular Epidemiologist</div><div class="li-sub">Studies population-level heart disease patterns</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Pharmacologist</div><div class="li-sub">Develops and tests cardiac drugs and therapies</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Bioinformatician</div><div class="li-sub">Analyzes genomic and clinical cardiac datasets</div></div></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-school"></i> Education pathway</div>
+      <div class="ep">
+        <span class="eb">Bachelor's (4 yrs)</span><span class="as">→</span>
+        <span class="eb">MD or PhD (4 yrs)</span><span class="as">→</span>
+        <span class="eb">Residency (3 yrs)</span><span class="as">→</span>
+        <span class="eb">Cardiology Fellowship (3 yrs)</span>
+      </div>
+      <div class="ep-note">Clinical track: Internal Medicine residency followed by a 3-year cardiology fellowship. Sub-specialty fellowships add 1–2 more years.</div>
+      <div class="ep-note" style="margin-top:6px">Research track: MD/PhD programs or a postdoctoral fellowship after PhD.</div>
+      <div class="sub-label" style="margin-top:10px">Recommended undergrad majors</div>
+      <div class="pill-row">
+        <span class="pill">Biology</span>
+        <span class="pill">Biochemistry</span>
+        <span class="pill">Physiology</span>
+        <span class="pill">Biomedical Eng.</span>
+        <span class="pill">Neuroscience</span>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="sn">Section 4</div>
+  <div class="st">Recommended learning</div>
+  <div class="sd">Curated videos, books, podcasts, and online courses for every level.</div>
+
+  <div class="sub-label">Videos & channels</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ch4"><i class="ti ti-brand-youtube"></i> Beginner-friendly</div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">TED-Ed — Heart & circulation</div><div class="rs">Short, animated, accessible</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">Khan Academy — Circulatory system</div><div class="rs">Free structured course, no prior knowledge needed</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">Kurzgesagt — How the heart works</div><div class="rs">Visually rich, great for general audience</div></div></div>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-brand-youtube"></i> Intermediate / clinical</div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">Osmosis — Cardiovascular</div><div class="rs">Pathology and pharmacology focused</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">Ninja Nerd — Cardiology playlist</div><div class="rs">In-depth lecture style, great for med students</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">Armando Hasudungan — Cardiology</div><div class="rs">Hand-drawn diagrams, clear pathophysiology</div></div></div>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-device-laptop"></i> Online courses</div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-certificate"></i></div><div><div class="rt">Coursera — Cardiac Science</div><div class="rs">Duke University offering</div></div></div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-certificate"></i></div><div><div class="rt">edX — Cardiac Physiology</div><div class="rs">University-level structured course</div></div></div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-certificate"></i></div><div><div class="rt">Medscape Cardiology CME</div><div class="rs">Free continuing medical education modules</div></div></div>
+    </div>
+  </div>
+
+  <div class="sub-label">Books & podcasts</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ch4"><i class="ti ti-book"></i> For general readers</div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">The Heart: A History — Sandeep Jauhar</div><div class="rs">Personal and scientific look at the heart's history</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">Heart 411 — Gillinov & Nissen</div><div class="rs">Evidence-based guide to heart health myths and facts</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">Ticker — Stefanie Spielman</div><div class="rs">Memoir and science of living with heart disease</div></div></div>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-book"></i> For students & researchers</div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">Braunwald's Heart Disease</div><div class="rs">The definitive clinical cardiology textbook</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">Clinical Cardiology Made Easy — David Gray</div><div class="rs">Practical intro for medical students</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">Pathophysiology of Heart Disease — Lilly</div><div class="rs">Widely used in medical school cardiology blocks</div></div></div>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-headphones"></i> Podcasts</div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-headphones"></i></div><div><div class="rt">CardioNerds</div><div class="rs">Case-based cardiology for trainees</div></div></div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-headphones"></i></div><div><div class="rt">Circulation on the Run</div><div class="rs">Weekly AHA journal highlights</div></div></div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-headphones"></i></div><div><div class="rt">ACC Podcast</div><div class="rs">Guidelines, research, and clinical interviews</div></div></div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-headphones"></i></div><div><div class="rt">The Heart of the Matter — AHA</div><div class="rs">Science journalism for a broad audience</div></div></div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html> 
