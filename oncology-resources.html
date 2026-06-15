@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Oncology Resources</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Calibri:wght@400;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#bf937c;--brand-light:#ede0d8;--brand-muted:#d4b4a4;--sage:#989885;--sage-light:#e4e4dc;--bg:#faf7f4;--text:#111;--text-muted:#555;--text-subtle:#888;--border:#ddd8d2;--card:#fff}
+body{font-family:'Calibri',Calibri,sans-serif;background:var(--bg);color:var(--text);line-height:1.25}
+.pw{max-width:900px;margin:0 auto;padding:2rem 1.5rem}
+.bc{font-size:12px;color:var(--text-subtle);margin-bottom:.75rem}
+.bc span{color:var(--text-muted)}
+.ph-title{font-size:24px;font-weight:700;color:var(--text);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.ph-title i{color:var(--brand);font-size:26px}
+.ph-sub{font-size:14px;color:var(--text-muted);margin-bottom:.75rem;line-height:1.25}
+.ph-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:2rem}
+.ph-tag{font-size:11px;padding:3px 10px;background:var(--sage-light);border-radius:10px;color:var(--sage);border:1px solid #ccccc0}
+hr{border:none;border-top:1px solid var(--border);margin:2rem 0}
+.sn{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--sage);margin-bottom:.3rem}
+.st{font-size:20px;font-weight:700;color:var(--text);margin-bottom:.3rem}
+.sd{font-size:13px;color:var(--text-muted);margin-bottom:1rem;line-height:1.25}
+.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:1rem}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:1rem}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.9rem 1rem}
+.ch{font-size:12px;font-weight:700;color:var(--brand);margin-bottom:8px;display:flex;align-items:center;gap:5px;line-height:1.25}
+.ch i{font-size:14px}
+ul.fl{list-style:none}
+ul.fl li{font-size:11.5px;padding:3.5px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:5px;line-height:1.25}
+ul.fl li:last-child{border-bottom:none}
+ul.fl li a{color:var(--brand);text-decoration:none}
+ul.fl li a:hover{text-decoration:underline}
+ul.fl li i{font-size:10px;color:var(--text-subtle);flex-shrink:0}
+.db-link{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--brand);padding:3.5px 0;text-decoration:none;line-height:1.25}
+.db-link:hover{text-decoration:underline}
+.db-link i{font-size:11px;flex-shrink:0}
+.db-desc{font-size:11px;color:var(--text-subtle);margin-left:17px;margin-bottom:2px;line-height:1.25}
+.ch4{font-size:13px;font-weight:700;color:var(--text);margin-bottom:8px;display:flex;align-items:center;gap:5px;line-height:1.25}
+.ch4 i{color:var(--brand)}
+ul.cl{list-style:none}
+ul.cl li{font-size:12px;color:var(--text-muted);padding:4px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:6px;line-height:1.25}
+ul.cl li:last-child{border-bottom:none}
+.sage-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--sage);margin-top:4px;flex-shrink:0}
+.li-sub{font-size:11px;color:var(--text-subtle);line-height:1.25}
+.ep{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-top:6px}
+.eb{font-size:11px;padding:3px 9px;background:var(--brand-light);border-radius:10px;color:var(--brand);border:1px solid var(--brand-muted)}
+.as{font-size:10px;color:var(--text-subtle)}
+.ep-note{font-size:11px;color:var(--text-subtle);margin-top:8px;line-height:1.25}
+.ri{display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px solid var(--border)}
+.ri:last-child{border-bottom:none}
+.ric{width:28px;height:28px;border-radius:6px;background:var(--brand-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--brand);font-size:14px}
+.ric.sage{background:var(--sage-light);color:var(--sage)}
+.rt{font-size:12px;color:var(--text-muted);line-height:1.25}
+.rs{font-size:11px;color:var(--text-subtle);line-height:1.25}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:1rem}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.85rem 1rem}
+.stat-num{font-size:20px;font-weight:700;color:var(--brand);line-height:1.1;margin-bottom:2px}
+.stat-label{font-size:11px;color:var(--text-muted);line-height:1.25}
+.sub-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--sage);margin:1rem 0 .4rem}
+.pill-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:.75rem}
+.pill{font-size:11px;padding:3px 10px;background:var(--sage-light);border-radius:10px;color:var(--sage);border:1px solid #ccccc0}
+@media(max-width:700px){.grid5,.grid3{grid-template-columns:1fr 1fr}.stat-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.grid5,.grid3,.stat-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="pw">
+
+  <div class="bc">Oncology <span>/ Resources</span></div>
+  <div class="ph-title"><i class="ti ti-microscope"></i> Oncology resources</div>
+  <div class="ph-sub">Everything you need to learn, research, and build a career in cancer biology, clinical oncology, and translational research. Use the sections below to explore core concepts, databases, career paths, and curated learning materials.</div>
+  <div class="ph-tags">
+    <span class="ph-tag">What is cancer?</span>
+    <span class="ph-tag">Hallmarks of cancer</span>
+    <span class="ph-tag">Tumor microenvironment</span>
+    <span class="ph-tag">Metastasis</span>
+    <span class="ph-tag">Immunotherapy</span>
+    <span class="ph-tag">Chemotherapy</span>
+    <span class="ph-tag">Genomics</span>
+    <span class="ph-tag">Clinical trials</span>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-num">20M</div><div class="stat-label">new cancer cases diagnosed globally each year (WHO, 2022)</div></div>
+    <div class="stat-card"><div class="stat-num">#2</div><div class="stat-label">leading cause of death in the United States</div></div>
+    <div class="stat-card"><div class="stat-num">9.7M</div><div class="stat-label">cancer-related deaths globally per year</div></div>
+    <div class="stat-card"><div class="stat-num">1 in 5</div><div class="stat-label">people will develop cancer in their lifetime (NCI)</div></div>
+  </div>
+
+  <hr>
+
+  <div class="sn">Section 1</div>
+  <div class="st">Learn the fundamentals</div>
+  <div class="sd">New to oncology? Each topic links to vetted external resources — from beginner-friendly overviews to deeper molecular and clinical reading.</div>
+  <div class="grid5">
+    <div class="card">
+      <div class="ch"><i class="ti ti-cell"></i> What is cancer?</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.cancer.gov/about-cancer/understanding/what-is-cancer" target="_blank">NCI: What is cancer?</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.cancer.org/cancer/understanding-cancer/what-is-cancer.html" target="_blank">ACS: Cancer basics</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Cancer" target="_blank">Osmosis: Cancer intro</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.khanacademy.org/science/ap-biology/gene-expression-and-regulation/cancer/a/cancer" target="_blank">Khan Academy: Cancer</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-dna"></i> Hallmarks of cancer</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.cell.com/cancer-cell/fulltext/S1535-6108(11)00003-8" target="_blank">Hanahan & Weinberg (Cell)</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3012030/" target="_blank">NCBI: Hallmarks review</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Hallmarks_of_cancer" target="_blank">Osmosis: Hallmarks</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.cancer.gov/about-cancer/understanding/statistics" target="_blank">NCI Cancer statistics</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-topology-ring"></i> Tumor microenvironment</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7593798/" target="_blank">NCBI: TME overview</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.cancer.gov/about-cancer/treatment/research/tumor-microenvironment" target="_blank">NCI: TME research</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.frontiersin.org/articles/10.3389/fimmu.2020.01032/full" target="_blank">Frontiers in Immunology</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Tumor_microenvironment" target="_blank">Osmosis: TME</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-arrows-move"></i> Metastasis basics</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.cancer.gov/about-cancer/understanding/metastatic-cancer" target="_blank">NCI: Metastasis</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/books/NBK9963/" target="_blank">NCBI: Metastasis biology</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Metastasis" target="_blank">Osmosis: Metastasis</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.mayoclinic.org/diseases-conditions/cancer/in-depth/cancer/art-20044092" target="_blank">Mayo Clinic: Cancer spread</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-book"></i> Cancer glossary</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.cancer.gov/publications/dictionaries/cancer-terms" target="_blank">NCI Dictionary</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.cancer.org/cancer/understanding-cancer/cancer-glossary.html" target="_blank">ACS Glossary</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.cancer.net/navigating-cancer-care/cancer-basics/glossary" target="_blank">Cancer.Net Glossary</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sub-label">More topics to explore</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ch"><i class="ti ti-shield-check"></i> Immunotherapy</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.cancer.gov/about-cancer/treatment/types/immunotherapy" target="_blank">NCI: Immunotherapy</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Immunotherapy" target="_blank">Osmosis: Immunotherapy</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5998875/" target="_blank">NCBI: CAR-T review</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.cancer.org/cancer/managing-cancer/treatment-types/immunotherapy.html" target="_blank">ACS: Immunotherapy</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-pill"></i> Chemotherapy & targeted therapy</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.cancer.gov/about-cancer/treatment/types/chemotherapy" target="_blank">NCI: Chemotherapy</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.cancer.gov/about-cancer/treatment/types/targeted-therapies" target="_blank">NCI: Targeted therapy</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Chemotherapy" target="_blank">Osmosis: Chemo</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/books/NBK209017/" target="_blank">NCBI: Drug resistance</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-dna-2"></i> Cancer genomics</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.genome.gov/health/Genomics-and-Medicine/Cancer" target="_blank">NIH: Cancer genomics</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga" target="_blank">NCI: TCGA project</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4358762/" target="_blank">NCBI: Somatic mutations</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.sanger.ac.uk/science/tools-software/cosmic" target="_blank">COSMIC: Cancer mutations</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="sn">Section 2</div>
+  <div class="st">Databases & research tools</div>
+  <div class="sd">Key platforms for finding cancer literature, clinical trials, genomic data, and population statistics.</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ch4">General research</div>
+      <a class="db-link" href="https://pubmed.ncbi.nlm.nih.gov/?term=oncology" target="_blank"><i class="ti ti-external-link"></i>PubMed — oncology</a>
+      <div class="db-desc">Search peer-reviewed cancer research literature</div>
+      <a class="db-link" href="https://scholar.google.com/" target="_blank"><i class="ti ti-external-link"></i>Google Scholar</a>
+      <div class="db-desc">Broad academic search across journals</div>
+      <a class="db-link" href="https://clinicaltrials.gov/search?cond=cancer" target="_blank"><i class="ti ti-external-link"></i>ClinicalTrials.gov — cancer</a>
+      <div class="db-desc">Find active and completed oncology trials</div>
+      <a class="db-link" href="https://www.cochranelibrary.com/" target="_blank"><i class="ti ti-external-link"></i>Cochrane Library</a>
+      <div class="db-desc">Systematic reviews and meta-analyses</div>
+    </div>
+    <div class="card">
+      <div class="ch4">Oncology-specific</div>
+      <a class="db-link" href="https://www.cancer.gov/" target="_blank"><i class="ti ti-external-link"></i>National Cancer Institute (NCI)</a>
+      <div class="db-desc">The primary US federal cancer research agency</div>
+      <a class="db-link" href="https://www.cancer.org/" target="_blank"><i class="ti ti-external-link"></i>American Cancer Society</a>
+      <div class="db-desc">Statistics, guidelines, and patient resources</div>
+      <a class="db-link" href="https://seer.cancer.gov/" target="_blank"><i class="ti ti-external-link"></i>SEER Cancer Statistics</a>
+      <div class="db-desc">NCI's Surveillance, Epidemiology, and End Results</div>
+      <a class="db-link" href="https://www.oncology.com/" target="_blank"><i class="ti ti-external-link"></i>ASCO — Journal of Clinical Oncology</a>
+      <div class="db-desc">Leading clinical oncology journal</div>
+    </div>
+    <div class="card">
+      <div class="ch4">Genomic & molecular data</div>
+      <a class="db-link" href="https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga" target="_blank"><i class="ti ti-external-link"></i>TCGA — Cancer Genome Atlas</a>
+      <div class="db-desc">Comprehensive genomic characterization of 33 cancers</div>
+      <a class="db-link" href="https://cancer.sanger.ac.uk/cosmic" target="_blank"><i class="ti ti-external-link"></i>COSMIC</a>
+      <div class="db-desc">Catalogue of somatic mutations in cancer</div>
+      <a class="db-link" href="https://www.cbioportal.org/" target="_blank"><i class="ti ti-external-link"></i>cBioPortal</a>
+      <div class="db-desc">Visualization of cancer genomics datasets</div>
+      <a class="db-link" href="https://www.kaggle.com/datasets?search=cancer" target="_blank"><i class="ti ti-external-link"></i>Kaggle — cancer datasets</a>
+      <div class="db-desc">Open datasets for modeling and research</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="sn">Section 3</div>
+  <div class="st">Career exploration</div>
+  <div class="sd">From surgical practice to translational research — oncology spans a broad range of scientific and clinical careers.</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ch4"><i class="ti ti-stethoscope"></i> Clinical careers</div>
+      <ul class="cl">
+        <li><span class="sage-dot"></span><div><div>Medical Oncologist</div><div class="li-sub">Treats cancer with chemotherapy, immunotherapy, targeted therapy</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Surgical Oncologist</div><div class="li-sub">Removes tumors and performs biopsies</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Radiation Oncologist</div><div class="li-sub">Uses radiation to treat and shrink tumors</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Hematologist-Oncologist</div><div class="li-sub">Specializes in blood cancers: leukemia, lymphoma, myeloma</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Oncology Nurse Practitioner</div><div class="li-sub">Advanced practice in cancer care and patient management</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Palliative Care Specialist</div><div class="li-sub">Focuses on quality of life for cancer patients</div></div></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-microscope"></i> Research & science careers</div>
+      <ul class="cl">
+        <li><span class="sage-dot"></span><div><div>Cancer Researcher / Biologist</div><div class="li-sub">Studies tumor biology, genetics, and drug targets</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Physician-Scientist (MD/PhD)</div><div class="li-sub">Conducts lab research alongside clinical practice</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Cancer Immunologist</div><div class="li-sub">Develops immunotherapies and studies immune-tumor interactions</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Cancer Epidemiologist</div><div class="li-sub">Tracks cancer incidence, risk factors, and trends</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Bioinformatician / Computational Oncologist</div><div class="li-sub">Analyzes cancer genomic datasets and builds predictive models</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Pharmaceutical Scientist</div><div class="li-sub">Develops and tests new cancer therapeutics</div></div></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-school"></i> Education pathway</div>
+      <div class="ep">
+        <span class="eb">Bachelor's (4 yrs)</span><span class="as">→</span>
+        <span class="eb">MD or PhD (4 yrs)</span><span class="as">→</span>
+        <span class="eb">Residency (3–5 yrs)</span><span class="as">→</span>
+        <span class="eb">Oncology Fellowship (2–3 yrs)</span>
+      </div>
+      <div class="ep-note">Clinical track: Internal Medicine or Surgery residency, then oncology fellowship. Sub-specialty fellowships (e.g. hematology-oncology) may extend training.</div>
+      <div class="ep-note" style="margin-top:6px">Research track: PhD in cancer biology, biochemistry, or genetics, followed by a postdoctoral fellowship. MD/PhD programs combine both paths.</div>
+      <div class="sub-label" style="margin-top:10px">Recommended undergrad majors</div>
+      <div class="pill-row">
+        <span class="pill">Biology</span>
+        <span class="pill">Biochemistry</span>
+        <span class="pill">Genetics</span>
+        <span class="pill">Cell Biology</span>
+        <span class="pill">Bioinformatics</span>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="sn">Section 4</div>
+  <div class="st">Recommended learning</div>
+  <div class="sd">Curated videos, books, podcasts, and online courses for every level — from curious beginner to advanced researcher.</div>
+
+  <div class="sub-label">Videos & channels</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ch4"><i class="ti ti-brand-youtube"></i> Beginner-friendly</div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">TED-Ed — How does cancer spread?</div><div class="rs">Short, animated, widely accessible</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">Khan Academy — Cancer biology</div><div class="rs">Free structured course, cell biology focus</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">Kurzgesagt — Cancer explained</div><div class="rs">Visually rich overview for general audiences</div></div></div>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-brand-youtube"></i> Intermediate / clinical</div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">Osmosis — Oncology playlist</div><div class="rs">Pathology and pharmacology of major cancers</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">Ninja Nerd — Oncology series</div><div class="rs">Detailed, lecture-style cancer biology</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">Armando Hasudungan — Oncology</div><div class="rs">Hand-drawn diagrams, clear pathophysiology</div></div></div>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-device-laptop"></i> Online courses</div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-certificate"></i></div><div><div class="rt">Coursera — Cancer Biology (Johns Hopkins)</div><div class="rs">University-level cancer science course</div></div></div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-certificate"></i></div><div><div class="rt">edX — Introduction to Cancer Biology</div><div class="rs">Structured, self-paced module</div></div></div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-certificate"></i></div><div><div class="rt">NCI Learning Portal</div><div class="rs">Free cancer research education from the NCI</div></div></div>
+    </div>
+  </div>
+
+  <div class="sub-label">Books & podcasts</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ch4"><i class="ti ti-book"></i> For general readers</div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">The Emperor of All Maladies — Siddhartha Mukherjee</div><div class="rs">Pulitzer-winning biography of cancer</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">The Immortal Life of Henrietta Lacks — Rebecca Skloot</div><div class="rs">Story of HeLa cells and medical ethics</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">When Breath Becomes Air — Paul Kalanithi</div><div class="rs">A neurosurgeon's memoir of facing terminal cancer</div></div></div>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-book"></i> For students & researchers</div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">The Biology of Cancer — Robert Weinberg</div><div class="rs">The definitive cancer biology textbook</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">DeVita, Hellman & Rosenberg's Cancer</div><div class="rs">Comprehensive clinical oncology reference</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">Molecular Biology of the Cell — Alberts et al.</div><div class="rs">Essential cell biology background for cancer research</div></div></div>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-headphones"></i> Podcasts</div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-headphones"></i></div><div><div class="rt">Oncology Today — ASCO</div><div class="rs">Clinical oncology news and research</div></div></div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-headphones"></i></div><div><div class="rt">Cancer.Net Podcast</div><div class="rs">Expert-led discussions on cancer care</div></div></div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-headphones"></i></div><div><div class="rt">NCI Cancer Currents</div><div class="rs">Latest NCI-funded research breakthroughs</div></div></div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-headphones"></i></div><div><div class="rt">The Cancer Pod</div><div class="rs">Accessible cancer science for all audiences</div></div></div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html> 
