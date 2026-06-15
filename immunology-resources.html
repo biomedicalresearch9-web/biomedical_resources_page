@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Immunology Resources</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Calibri:wght@400;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#bf937c;--brand-light:#ede0d8;--brand-muted:#d4b4a4;--sage:#989885;--sage-light:#e4e4dc;--bg:#faf7f4;--text:#111;--text-muted:#555;--text-subtle:#888;--border:#ddd8d2;--card:#fff}
+body{font-family:'Calibri',Calibri,sans-serif;background:var(--bg);color:var(--text);line-height:1.25}
+.pw{max-width:900px;margin:0 auto;padding:2rem 1.5rem}
+.bc{font-size:12px;color:var(--text-subtle);margin-bottom:.75rem}
+.bc span{color:var(--text-muted)}
+.ph-title{font-size:24px;font-weight:700;color:var(--text);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.ph-title i{color:var(--brand);font-size:26px}
+.ph-sub{font-size:14px;color:var(--text-muted);margin-bottom:.75rem;line-height:1.25}
+.ph-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:2rem}
+.ph-tag{font-size:11px;padding:3px 10px;background:var(--sage-light);border-radius:10px;color:var(--sage);border:1px solid #ccccc0}
+hr{border:none;border-top:1px solid var(--border);margin:2rem 0}
+.sn{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--sage);margin-bottom:.3rem}
+.st{font-size:20px;font-weight:700;color:var(--text);margin-bottom:.3rem}
+.sd{font-size:13px;color:var(--text-muted);margin-bottom:1rem;line-height:1.25}
+.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:1rem}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:1rem}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.9rem 1rem}
+.ch{font-size:12px;font-weight:700;color:var(--brand);margin-bottom:8px;display:flex;align-items:center;gap:5px;line-height:1.25}
+.ch i{font-size:14px}
+ul.fl{list-style:none}
+ul.fl li{font-size:11.5px;padding:3.5px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:5px;line-height:1.25}
+ul.fl li:last-child{border-bottom:none}
+ul.fl li a{color:var(--brand);text-decoration:none}
+ul.fl li a:hover{text-decoration:underline}
+ul.fl li i{font-size:10px;color:var(--text-subtle);flex-shrink:0}
+.db-link{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--brand);padding:3.5px 0;text-decoration:none;line-height:1.25}
+.db-link:hover{text-decoration:underline}
+.db-link i{font-size:11px;flex-shrink:0}
+.db-desc{font-size:11px;color:var(--text-subtle);margin-left:17px;margin-bottom:2px;line-height:1.25}
+.ch4{font-size:13px;font-weight:700;color:var(--text);margin-bottom:8px;display:flex;align-items:center;gap:5px;line-height:1.25}
+.ch4 i{color:var(--brand)}
+ul.cl{list-style:none}
+ul.cl li{font-size:12px;color:var(--text-muted);padding:4px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:6px;line-height:1.25}
+ul.cl li:last-child{border-bottom:none}
+.sage-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--sage);margin-top:4px;flex-shrink:0}
+.li-sub{font-size:11px;color:var(--text-subtle);line-height:1.25}
+.ep{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-top:6px}
+.eb{font-size:11px;padding:3px 9px;background:var(--brand-light);border-radius:10px;color:var(--brand);border:1px solid var(--brand-muted)}
+.as{font-size:10px;color:var(--text-subtle)}
+.ep-note{font-size:11px;color:var(--text-subtle);margin-top:8px;line-height:1.25}
+.ri{display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px solid var(--border)}
+.ri:last-child{border-bottom:none}
+.ric{width:28px;height:28px;border-radius:6px;background:var(--brand-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--brand);font-size:14px}
+.ric.sage{background:var(--sage-light);color:var(--sage)}
+.rt{font-size:12px;color:var(--text-muted);line-height:1.25}
+.rs{font-size:11px;color:var(--text-subtle);line-height:1.25}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:1rem}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.85rem 1rem}
+.stat-num{font-size:20px;font-weight:700;color:var(--brand);line-height:1.1;margin-bottom:2px}
+.stat-label{font-size:11px;color:var(--text-muted);line-height:1.25}
+.sub-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--sage);margin:1rem 0 .4rem}
+.pill-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:.75rem}
+.pill{font-size:11px;padding:3px 10px;background:var(--sage-light);border-radius:10px;color:var(--sage);border:1px solid #ccccc0}
+@media(max-width:700px){.grid5,.grid3{grid-template-columns:1fr 1fr}.stat-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.grid5,.grid3,.stat-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="pw">
+
+  <div class="bc">Immunology <span>/ Resources</span></div>
+  <div class="ph-title"><i class="ti ti-shield"></i> Immunology resources</div>
+  <div class="ph-sub">Everything you need to learn, research, and build a career in immunology — from innate and adaptive immunity to vaccines, autoimmunity, and cutting-edge immunotherapy research.</div>
+  <div class="ph-tags">
+    <span class="ph-tag">Innate immunity</span>
+    <span class="ph-tag">Adaptive immunity</span>
+    <span class="ph-tag">T cells</span>
+    <span class="ph-tag">B cells</span>
+    <span class="ph-tag">Vaccines</span>
+    <span class="ph-tag">Autoimmunity</span>
+    <span class="ph-tag">Cytokines</span>
+    <span class="ph-tag">Immunotherapy</span>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-num">80+</div><div class="stat-label">recognized autoimmune diseases affecting millions worldwide</div></div>
+    <div class="stat-card"><div class="stat-num">~1B</div><div class="stat-label">COVID-19 vaccine doses administered globally in 2021 alone</div></div>
+    <div class="stat-card"><div class="stat-num">23.8M</div><div class="stat-label">Americans estimated to have an autoimmune disease (AARDA)</div></div>
+    <div class="stat-card"><div class="stat-num">$200B+</div><div class="stat-label">global immunology drug market, one of the fastest-growing fields</div></div>
+  </div>
+
+  <hr>
+
+  <div class="sn">Section 1</div>
+  <div class="st">Learn the fundamentals</div>
+  <div class="sd">New to immunology? Each topic links to vetted external resources — from beginner introductions to in-depth scientific reading.</div>
+  <div class="grid5">
+    <div class="card">
+      <div class="ch"><i class="ti ti-shield-half"></i> Innate immunity</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.khanacademy.org/science/health-and-medicine/immunology/innate-immunity" target="_blank">Khan Academy: Innate</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/books/NBK537186/" target="_blank">NCBI: Innate immunity</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Innate_immunity" target="_blank">Osmosis: Innate</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.niaid.nih.gov/research/innate-immunity" target="_blank">NIAID: Innate immunity</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-shield-check"></i> Adaptive immunity</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.khanacademy.org/science/health-and-medicine/immunology/adaptive-immunity" target="_blank">Khan Academy: Adaptive</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/books/NBK279396/" target="_blank">NCBI: Adaptive immunity</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Adaptive_immunity" target="_blank">Osmosis: Adaptive</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.niaid.nih.gov/research/adaptive-immunity" target="_blank">NIAID: Adaptive immunity</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-cell"></i> Major immune cells</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/books/NBK26884/" target="_blank">NCBI: Immune cell types</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/T_cells" target="_blank">Osmosis: T cells</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/B_cells" target="_blank">Osmosis: B cells</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.khanacademy.org/science/health-and-medicine/immunology/lymphocytes" target="_blank">Khan Academy: Lymphocytes</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-vaccine"></i> Vaccines</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.niaid.nih.gov/research/vaccine-types" target="_blank">NIAID: Vaccine types</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.cdc.gov/vaccines/hcp/conversations/understanding-vacc-work.html" target="_blank">CDC: How vaccines work</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Vaccines" target="_blank">Osmosis: Vaccines</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.who.int/news-room/questions-and-answers/item/vaccines-and-immunization-what-is-vaccination" target="_blank">WHO: Vaccination</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-book"></i> Immunology glossary</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.niaid.nih.gov/research/immune-system" target="_blank">NIAID: Immune system</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.immunology.org/public-information/bitesized-immunology" target="_blank">British Society for Immunology</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.cancer.gov/publications/dictionaries/cancer-terms/def/immunology" target="_blank">NCI Immunology terms</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sub-label">More topics to explore</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ch"><i class="ti ti-alert-triangle"></i> Autoimmunity</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.niaid.nih.gov/diseases-conditions/autoimmune-diseases" target="_blank">NIAID: Autoimmune diseases</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Autoimmune_diseases" target="_blank">Osmosis: Autoimmunity</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3150367/" target="_blank">NCBI: Autoimmunity review</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.mayoclinic.org/diseases-conditions/autoimmune-disease/symptoms-causes/syc-20350831" target="_blank">Mayo Clinic: Autoimmune</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-molecule"></i> Cytokines & signaling</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1828471/" target="_blank">NCBI: Cytokine overview</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Cytokines" target="_blank">Osmosis: Cytokines</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.frontiersin.org/articles/10.3389/fimmu.2021.603050/full" target="_blank">Frontiers: Cytokine storm</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/books/NBK26827/" target="_blank">NCBI: Cell signaling</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-virus"></i> Infection & immunity</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.niaid.nih.gov/research/microbiology-infectious-diseases" target="_blank">NIAID: Infectious disease</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Infectious_diseases" target="_blank">Osmosis: Infectious disease</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.cdc.gov/niosh/topics/hierarchy/default.html" target="_blank">CDC: Immunity basics</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/books/NBK8423/" target="_blank">NCBI: Host defense</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="sn">Section 2</div>
+  <div class="st">Databases & research tools</div>
+  <div class="sd">Platforms for finding immunology literature, clinical trials, protein data, and pathway databases.</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ch4">General research</div>
+      <a class="db-link" href="https://pubmed.ncbi.nlm.nih.gov/?term=immunology" target="_blank"><i class="ti ti-external-link"></i>PubMed — immunology</a>
+      <div class="db-desc">Search peer-reviewed immunology literature</div>
+      <a class="db-link" href="https://scholar.google.com/" target="_blank"><i class="ti ti-external-link"></i>Google Scholar</a>
+      <div class="db-desc">Broad academic search across journals</div>
+      <a class="db-link" href="https://clinicaltrials.gov/search?cond=autoimmune" target="_blank"><i class="ti ti-external-link"></i>ClinicalTrials.gov — autoimmune</a>
+      <div class="db-desc">Active and completed immunology trials</div>
+      <a class="db-link" href="https://www.cochranelibrary.com/" target="_blank"><i class="ti ti-external-link"></i>Cochrane Library</a>
+      <div class="db-desc">Systematic reviews on immune interventions</div>
+    </div>
+    <div class="card">
+      <div class="ch4">Immunology-specific</div>
+      <a class="db-link" href="https://www.niaid.nih.gov/" target="_blank"><i class="ti ti-external-link"></i>NIAID</a>
+      <div class="db-desc">NIH institute for allergy and infectious disease</div>
+      <a class="db-link" href="https://www.immunology.org/" target="_blank"><i class="ti ti-external-link"></i>British Society for Immunology</a>
+      <div class="db-desc">Educational resources and research news</div>
+      <a class="db-link" href="https://www.jimmunol.org/" target="_blank"><i class="ti ti-external-link"></i>Journal of Immunology</a>
+      <div class="db-desc">Leading peer-reviewed immunology journal</div>
+      <a class="db-link" href="https://www.frontiersin.org/journals/immunology" target="_blank"><i class="ti ti-external-link"></i>Frontiers in Immunology</a>
+      <div class="db-desc">Open-access immunology research</div>
+    </div>
+    <div class="card">
+      <div class="ch4">Protein & pathway data</div>
+      <a class="db-link" href="https://www.uniprot.org/" target="_blank"><i class="ti ti-external-link"></i>UniProt</a>
+      <div class="db-desc">Protein sequences and functional information</div>
+      <a class="db-link" href="https://www.kegg.jp/kegg/pathway.html" target="_blank"><i class="ti ti-external-link"></i>KEGG Pathway</a>
+      <div class="db-desc">Immune signaling pathway maps</div>
+      <a class="db-link" href="https://www.immport.org/" target="_blank"><i class="ti ti-external-link"></i>ImmPort</a>
+      <div class="db-desc">Open immunology data repository (NIH-funded)</div>
+      <a class="db-link" href="https://www.kaggle.com/datasets?search=immune" target="_blank"><i class="ti ti-external-link"></i>Kaggle — immune datasets</a>
+      <div class="db-desc">Open datasets for modeling and research</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="sn">Section 3</div>
+  <div class="st">Career exploration</div>
+  <div class="sd">Immunology spans clinical medicine, vaccine development, autoimmune research, and cutting-edge cell therapy — a wide range of impactful careers.</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ch4"><i class="ti ti-stethoscope"></i> Clinical careers</div>
+      <ul class="cl">
+        <li><span class="sage-dot"></span><div><div>Clinical Immunologist / Allergist</div><div class="li-sub">Diagnoses and treats immune system disorders and allergies</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Rheumatologist</div><div class="li-sub">Manages autoimmune diseases: lupus, RA, MS</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Infectious Disease Specialist</div><div class="li-sub">Treats infections and immune responses to pathogens</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Transplant Immunologist</div><div class="li-sub">Manages immune rejection in organ transplant patients</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Oncology Immunologist</div><div class="li-sub">Applies immunotherapy in cancer treatment</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Pediatric Immunologist</div><div class="li-sub">Treats immune deficiencies in children</div></div></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-microscope"></i> Research & science careers</div>
+      <ul class="cl">
+        <li><span class="sage-dot"></span><div><div>Immunologist / Research Scientist</div><div class="li-sub">Investigates immune mechanisms in disease and health</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Vaccine Researcher</div><div class="li-sub">Designs and tests vaccines for infectious and chronic diseases</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Autoimmune Disease Researcher</div><div class="li-sub">Studies breakdown of immune self-tolerance</div></div></li>
+        <li><span class="sage-dot"></span><div><div>CAR-T / Cell Therapy Scientist</div><div class="li-sub">Engineers immune cells as therapeutic agents</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Bioinformatician (Immunogenomics)</div><div class="li-sub">Analyzes immune cell sequencing and TCR/BCR data</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Pharmaceutical / Biotech Immunologist</div><div class="li-sub">Develops biologics, antibodies, and immune modulators</div></div></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-school"></i> Education pathway</div>
+      <div class="ep">
+        <span class="eb">Bachelor's (4 yrs)</span><span class="as">→</span>
+        <span class="eb">MD or PhD (4 yrs)</span><span class="as">→</span>
+        <span class="eb">Residency (3 yrs)</span><span class="as">→</span>
+        <span class="eb">Immunology Fellowship (2–3 yrs)</span>
+      </div>
+      <div class="ep-note">Clinical track: Internal Medicine or Pediatrics residency, then allergy/immunology fellowship (2 yrs). Rheumatology adds its own fellowship.</div>
+      <div class="ep-note" style="margin-top:6px">Research track: PhD in immunology, microbiology, or cell biology, followed by a postdoctoral fellowship. Many academic immunologists hold MD/PhD dual degrees.</div>
+      <div class="sub-label" style="margin-top:10px">Recommended undergrad majors</div>
+      <div class="pill-row">
+        <span class="pill">Biology</span>
+        <span class="pill">Microbiology</span>
+        <span class="pill">Biochemistry</span>
+        <span class="pill">Cell Biology</span>
+        <span class="pill">Molecular Biology</span>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="sn">Section 4</div>
+  <div class="st">Recommended learning</div>
+  <div class="sd">Curated videos, books, podcasts, and online courses on immunology for every level.</div>
+
+  <div class="sub-label">Videos & channels</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ch4"><i class="ti ti-brand-youtube"></i> Beginner-friendly</div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">TED-Ed — Your immune system</div><div class="rs">Short animated overview of immune defense</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">Khan Academy — Immunology</div><div class="rs">Free structured course from basics upward</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">Kurzgesagt — The immune system explained</div><div class="rs">Beautifully animated, widely shared series</div></div></div>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-brand-youtube"></i> Intermediate / clinical</div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">Osmosis — Immunology playlist</div><div class="rs">Cell-by-cell breakdown of immune responses</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">Ninja Nerd — Immunology series</div><div class="rs">Lecture-style, detailed immune signaling</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">Armando Hasudungan — Immunology</div><div class="rs">Hand-drawn clarity on complex immune topics</div></div></div>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-device-laptop"></i> Online courses</div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-certificate"></i></div><div><div class="rt">Coursera — Immunology (Duke University)</div><div class="rs">Structured university-level immune course</div></div></div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-certificate"></i></div><div><div class="rt">edX — Vaccinology</div><div class="rs">Vaccine science and immune memory</div></div></div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-certificate"></i></div><div><div class="rt">NIAID Training Programs</div><div class="rs">Free NIH-sponsored immunology education</div></div></div>
+    </div>
+  </div>
+
+  <div class="sub-label">Books & podcasts</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ch4"><i class="ti ti-book"></i> For general readers</div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">Immune — Philipp Dettmer</div><div class="rs">Stunning illustrated guide to the immune system</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">The Beautiful Cure — Daniel Davis</div><div class="rs">Story of how the immune system was discovered</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">An Elegant Defense — Matt Richtel</div><div class="rs">Pulitzer-winner's exploration of immune science</div></div></div>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-book"></i> For students & researchers</div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">Janeway's Immunobiology — Murphy & Weaver</div><div class="rs">The standard immunology textbook</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">Cellular and Molecular Immunology — Abbas et al.</div><div class="rs">Widely used in graduate immunology courses</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">Clinical Immunology — Rich et al.</div><div class="rs">Clinical reference for immune disorders</div></div></div>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-headphones"></i> Podcasts</div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-headphones"></i></div><div><div class="rt">Immune — TWiM / Vincent Racaniello</div><div class="rs">In-depth immunology science conversations</div></div></div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-headphones"></i></div><div><div class="rt">NIAID Now Podcast</div><div class="rs">Research updates from the National Institute of Allergy</div></div></div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-headphones"></i></div><div><div class="rt">Immunology Podcast — BSI</div><div class="rs">British Society for Immunology research talks</div></div></div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-headphones"></i></div><div><div class="rt">Science Friday — Immunity episodes</div><div class="rs">Accessible science journalism on immune topics</div></div></div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
