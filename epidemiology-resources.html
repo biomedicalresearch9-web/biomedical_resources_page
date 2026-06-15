@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Epidemiology Resources</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Calibri:wght@400;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--brand:#bf937c;--brand-light:#ede0d8;--brand-muted:#d4b4a4;--sage:#989885;--sage-light:#e4e4dc;--bg:#faf7f4;--text:#111;--text-muted:#555;--text-subtle:#888;--border:#ddd8d2;--card:#fff}
+body{font-family:'Calibri',Calibri,sans-serif;background:var(--bg);color:var(--text);line-height:1.25}
+.pw{max-width:900px;margin:0 auto;padding:2rem 1.5rem}
+.bc{font-size:12px;color:var(--text-subtle);margin-bottom:.75rem}
+.bc span{color:var(--text-muted)}
+.ph-title{font-size:24px;font-weight:700;color:var(--text);margin-bottom:6px;display:flex;align-items:center;gap:8px}
+.ph-title i{color:var(--brand);font-size:26px}
+.ph-sub{font-size:14px;color:var(--text-muted);margin-bottom:.75rem;line-height:1.25}
+.ph-tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:2rem}
+.ph-tag{font-size:11px;padding:3px 10px;background:var(--sage-light);border-radius:10px;color:var(--sage);border:1px solid #ccccc0}
+hr{border:none;border-top:1px solid var(--border);margin:2rem 0}
+.sn{font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--sage);margin-bottom:.3rem}
+.st{font-size:20px;font-weight:700;color:var(--text);margin-bottom:.3rem}
+.sd{font-size:13px;color:var(--text-muted);margin-bottom:1rem;line-height:1.25}
+.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:1rem}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:1rem}
+.card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.9rem 1rem}
+.ch{font-size:12px;font-weight:700;color:var(--brand);margin-bottom:8px;display:flex;align-items:center;gap:5px;line-height:1.25}
+.ch i{font-size:14px}
+ul.fl{list-style:none}
+ul.fl li{font-size:11.5px;padding:3.5px 0;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:5px;line-height:1.25}
+ul.fl li:last-child{border-bottom:none}
+ul.fl li a{color:var(--brand);text-decoration:none}
+ul.fl li a:hover{text-decoration:underline}
+ul.fl li i{font-size:10px;color:var(--text-subtle);flex-shrink:0}
+.db-link{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--brand);padding:3.5px 0;text-decoration:none;line-height:1.25}
+.db-link:hover{text-decoration:underline}
+.db-link i{font-size:11px;flex-shrink:0}
+.db-desc{font-size:11px;color:var(--text-subtle);margin-left:17px;margin-bottom:2px;line-height:1.25}
+.ch4{font-size:13px;font-weight:700;color:var(--text);margin-bottom:8px;display:flex;align-items:center;gap:5px;line-height:1.25}
+.ch4 i{color:var(--brand)}
+ul.cl{list-style:none}
+ul.cl li{font-size:12px;color:var(--text-muted);padding:4px 0;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;gap:6px;line-height:1.25}
+ul.cl li:last-child{border-bottom:none}
+.sage-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--sage);margin-top:4px;flex-shrink:0}
+.li-sub{font-size:11px;color:var(--text-subtle);line-height:1.25}
+.ep{display:flex;align-items:center;gap:5px;flex-wrap:wrap;margin-top:6px}
+.eb{font-size:11px;padding:3px 9px;background:var(--brand-light);border-radius:10px;color:var(--brand);border:1px solid var(--brand-muted)}
+.as{font-size:10px;color:var(--text-subtle)}
+.ep-note{font-size:11px;color:var(--text-subtle);margin-top:8px;line-height:1.25}
+.ri{display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:1px solid var(--border)}
+.ri:last-child{border-bottom:none}
+.ric{width:28px;height:28px;border-radius:6px;background:var(--brand-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--brand);font-size:14px}
+.ric.sage{background:var(--sage-light);color:var(--sage)}
+.rt{font-size:12px;color:var(--text-muted);line-height:1.25}
+.rs{font-size:11px;color:var(--text-subtle);line-height:1.25}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:1rem}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:.85rem 1rem}
+.stat-num{font-size:20px;font-weight:700;color:var(--brand);line-height:1.1;margin-bottom:2px}
+.stat-label{font-size:11px;color:var(--text-muted);line-height:1.25}
+.sub-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--sage);margin:1rem 0 .4rem}
+.pill-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:.75rem}
+.pill{font-size:11px;padding:3px 10px;background:var(--sage-light);border-radius:10px;color:var(--sage);border:1px solid #ccccc0}
+@media(max-width:700px){.grid5,.grid3{grid-template-columns:1fr 1fr}.stat-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.grid5,.grid3,.stat-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="pw">
+
+  <div class="bc">Epidemiology <span>/ Resources</span></div>
+  <div class="ph-title"><i class="ti ti-world"></i> Epidemiology resources</div>
+  <div class="ph-sub">Everything you need to learn, research, and build a career in epidemiology — from study design and biostatistics to public health policy, disease surveillance, and global health.</div>
+  <div class="ph-tags">
+    <span class="ph-tag">Incidence vs prevalence</span>
+    <span class="ph-tag">Cohort studies</span>
+    <span class="ph-tag">Case-control studies</span>
+    <span class="ph-tag">Risk factors</span>
+    <span class="ph-tag">Biostatistics</span>
+    <span class="ph-tag">Disease surveillance</span>
+    <span class="ph-tag">Outbreak investigation</span>
+    <span class="ph-tag">Global health</span>
+  </div>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="stat-num">3.7B</div><div class="stat-label">people at risk of dengue fever across 129 countries (WHO)</div></div>
+    <div class="stat-card"><div class="stat-num">$8.1B</div><div class="stat-label">estimated global cost of the COVID-19 pandemic to date</div></div>
+    <div class="stat-card"><div class="stat-num">70%</div><div class="stat-label">of new infectious diseases originate in animals (zoonotic)</div></div>
+    <div class="stat-card"><div class="stat-num">#1</div><div class="stat-label">tool for identifying causes of disease at the population level</div></div>
+  </div>
+
+  <hr>
+
+  <div class="sn">Section 1</div>
+  <div class="st">Learn the fundamentals</div>
+  <div class="sd">New to epidemiology? Each topic links to vetted external resources — from intuitive introductions to in-depth methodological reading.</div>
+  <div class="grid5">
+    <div class="card">
+      <div class="ch"><i class="ti ti-chart-bar"></i> Incidence vs prevalence</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.cdc.gov/csels/dsepd/ss1978/lesson3/section2.html" target="_blank">CDC: Incidence & prevalence</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.khanacademy.org/science/health-and-medicine/healthcare-misc/epidemiology" target="_blank">Khan Academy: Epidemiology</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1065110/" target="_blank">NCBI: Measures of disease</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Epidemiology" target="_blank">Osmosis: Epidemiology</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-users"></i> Cohort studies</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/7-cohort-studies" target="_blank">BMJ: Cohort studies</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2998589/" target="_blank">NCBI: Cohort design</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Cohort_study" target="_blank">Osmosis: Cohort study</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.cdc.gov/csels/dsepd/ss1978/lesson1/section7.html" target="_blank">CDC: Study types</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-analyze"></i> Case-control studies</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.bmj.com/about-bmj/resources-readers/publications/epidemiology-uninitiated/8-case-control-studies" target="_blank">BMJ: Case-control</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1448027/" target="_blank">NCBI: Case-control design</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Case-control_study" target="_blank">Osmosis: Case-control</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.cdc.gov/csels/dsepd/ss1978/lesson1/section7.html" target="_blank">CDC: Epi study types</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-alert-circle"></i> Risk factors</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.who.int/news-room/fact-sheets/detail/noncommunicable-diseases" target="_blank">WHO: Risk factor overview</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.cdc.gov/chronicdisease/resources/publications/factsheets/risk-factors.htm" target="_blank">CDC: Chronic disease risk</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3299015/" target="_blank">NCBI: Attributable risk</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.osmosis.org/learn/Risk_factors" target="_blank">Osmosis: Risk factors</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-book"></i> Epidemiology glossary</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.cdc.gov/csels/dsepd/ss1978/glossary.html" target="_blank">CDC: Epi glossary</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.who.int/publications/m/item/a-dictionary-of-epidemiology" target="_blank">WHO Dictionary of Epi</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.paho.org/en/topics/epidemiology" target="_blank">PAHO: Epidemiology</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="sub-label">More topics to explore</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ch"><i class="ti ti-math-function"></i> Biostatistics</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.khanacademy.org/math/statistics-probability" target="_blank">Khan Academy: Statistics</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.coursera.org/learn/biostatistics" target="_blank">Coursera: Biostatistics</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4111019/" target="_blank">NCBI: Epi biostatistics</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://bolt.mph.ufl.edu/6050-6052/" target="_blank">UFL: Applied biostatistics</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-virus"></i> Outbreak investigation</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.cdc.gov/training/quicklearns/epimode/" target="_blank">CDC: Epi in action</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.who.int/emergencies/outbreak-toolkit" target="_blank">WHO: Outbreak toolkit</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7054218/" target="_blank">NCBI: Outbreak response</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.coursera.org/learn/disease-surveillance" target="_blank">Coursera: Surveillance</a></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch"><i class="ti ti-globe"></i> Global health</div>
+      <ul class="fl">
+        <li><i class="ti ti-external-link"></i><a href="https://www.who.int/health-topics" target="_blank">WHO: Global health topics</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://ourworldindata.org/health" target="_blank">Our World in Data: Health</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.globalburdenoffdisease.org/" target="_blank">Global Burden of Disease</a></li>
+        <li><i class="ti ti-external-link"></i><a href="https://www.paho.org/en" target="_blank">PAHO: Americas health data</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="sn">Section 2</div>
+  <div class="st">Databases & research tools</div>
+  <div class="sd">Platforms for finding epidemiology literature, public health surveillance data, global disease statistics, and open population datasets.</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ch4">General research</div>
+      <a class="db-link" href="https://pubmed.ncbi.nlm.nih.gov/?term=epidemiology" target="_blank"><i class="ti ti-external-link"></i>PubMed — epidemiology</a>
+      <div class="db-desc">Search peer-reviewed epidemiology literature</div>
+      <a class="db-link" href="https://scholar.google.com/" target="_blank"><i class="ti ti-external-link"></i>Google Scholar</a>
+      <div class="db-desc">Broad academic search across journals</div>
+      <a class="db-link" href="https://clinicaltrials.gov/" target="_blank"><i class="ti ti-external-link"></i>ClinicalTrials.gov</a>
+      <div class="db-desc">Observational and interventional study registry</div>
+      <a class="db-link" href="https://www.cochranelibrary.com/" target="_blank"><i class="ti ti-external-link"></i>Cochrane Library</a>
+      <div class="db-desc">Systematic reviews of public health interventions</div>
+    </div>
+    <div class="card">
+      <div class="ch4">Epidemiology-specific</div>
+      <a class="db-link" href="https://www.cdc.gov/DataStatistics/" target="_blank"><i class="ti ti-external-link"></i>CDC Data & Statistics</a>
+      <div class="db-desc">US disease surveillance and public health data</div>
+      <a class="db-link" href="https://www.who.int/data" target="_blank"><i class="ti ti-external-link"></i>WHO Global Health Data</a>
+      <div class="db-desc">International health indicators and disease burden</div>
+      <a class="db-link" href="https://www.thelancet.com/" target="_blank"><i class="ti ti-external-link"></i>The Lancet</a>
+      <div class="db-desc">Leading global health and epidemiology journal</div>
+      <a class="db-link" href="https://academic.oup.com/ije" target="_blank"><i class="ti ti-external-link"></i>International Journal of Epidemiology</a>
+      <div class="db-desc">Peer-reviewed methodological and applied epi</div>
+    </div>
+    <div class="card">
+      <div class="ch4">Population & open data</div>
+      <a class="db-link" href="https://ourworldindata.org/" target="_blank"><i class="ti ti-external-link"></i>Our World in Data</a>
+      <div class="db-desc">Interactive charts on global health and disease</div>
+      <a class="db-link" href="https://www.healthdata.org/" target="_blank"><i class="ti ti-external-link"></i>IHME — Global Burden of Disease</a>
+      <div class="db-desc">Comprehensive global disease burden estimates</div>
+      <a class="db-link" href="https://www.kaggle.com/datasets?search=epidemiology" target="_blank"><i class="ti ti-external-link"></i>Kaggle — epi datasets</a>
+      <div class="db-desc">Open datasets for modeling and analysis</div>
+      <a class="db-link" href="https://data.worldbank.org/topic/health" target="_blank"><i class="ti ti-external-link"></i>World Bank Health Data</a>
+      <div class="db-desc">Country-level health and development indicators</div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="sn">Section 3</div>
+  <div class="st">Career exploration</div>
+  <div class="sd">Epidemiologists work across government agencies, academia, global health organizations, and the private sector — investigating disease patterns and shaping public health policy.</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ch4"><i class="ti ti-building"></i> Applied & public health careers</div>
+      <ul class="cl">
+        <li><span class="sage-dot"></span><div><div>Epidemiologist (CDC / State Health Dept.)</div><div class="li-sub">Conducts disease surveillance and outbreak response</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Public Health Officer</div><div class="li-sub">Implements and evaluates population health programs</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Infectious Disease Epidemiologist</div><div class="li-sub">Tracks and controls communicable disease outbreaks</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Global Health Epidemiologist</div><div class="li-sub">Works with WHO, NGOs, and governments on international disease</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Environmental Epidemiologist</div><div class="li-sub">Studies how environment and toxins affect population health</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Health Policy Analyst</div><div class="li-sub">Uses epi data to shape legislation and health systems</div></div></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-microscope"></i> Research & academic careers</div>
+      <ul class="cl">
+        <li><span class="sage-dot"></span><div><div>Academic Epidemiologist</div><div class="li-sub">Conducts research and teaches at universities</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Clinical Epidemiologist</div><div class="li-sub">Designs and analyzes clinical trials and observational studies</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Biostatistician</div><div class="li-sub">Analyzes public health data using statistical methods</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Cancer Epidemiologist</div><div class="li-sub">Studies cancer incidence, etiology, and prevention</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Pharmacoepidemiologist</div><div class="li-sub">Studies drug safety and effectiveness in populations</div></div></li>
+        <li><span class="sage-dot"></span><div><div>Computational Epidemiologist</div><div class="li-sub">Models disease spread using mathematical and AI methods</div></div></li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-school"></i> Education pathway</div>
+      <div class="ep">
+        <span class="eb">Bachelor's (4 yrs)</span><span class="as">→</span>
+        <span class="eb">MPH or MS (2 yrs)</span><span class="as">→</span>
+        <span class="eb">PhD or DrPH (4–5 yrs)</span>
+      </div>
+      <div class="ep-note">Most epidemiologists hold a Master of Public Health (MPH) for applied roles, or a PhD/DrPH for research and academic careers. MD-MPH dual degrees are common for clinician-epidemiologists.</div>
+      <div class="ep-note" style="margin-top:6px">Practical experience through CDC Epidemic Intelligence Service (EIS) or FETP fellowships is highly valued.</div>
+      <div class="sub-label" style="margin-top:10px">Recommended undergrad majors</div>
+      <div class="pill-row">
+        <span class="pill">Public Health</span>
+        <span class="pill">Biology</span>
+        <span class="pill">Statistics</span>
+        <span class="pill">Sociology</span>
+        <span class="pill">Environmental Science</span>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="sn">Section 4</div>
+  <div class="st">Recommended learning</div>
+  <div class="sd">Curated videos, books, podcasts, and online courses on epidemiology for every level.</div>
+
+  <div class="sub-label">Videos & channels</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ch4"><i class="ti ti-brand-youtube"></i> Beginner-friendly</div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">TED-Ed — How do epidemics spread?</div><div class="rs">Short animated overview of disease transmission</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">Khan Academy — Epidemiology</div><div class="rs">Free intro to epi concepts and study design</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">Kurzgesagt — The Coronavirus explained</div><div class="rs">Clear pandemic science for general audiences</div></div></div>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-brand-youtube"></i> Intermediate / methods</div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">Osmosis — Epidemiology & biostatistics</div><div class="rs">Study design and epi measures explained</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">Dr. John Campbell — Epidemiology explainers</div><div class="rs">Evidence-based breakdowns of health data</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-brand-youtube"></i></div><div><div class="rt">Hans Rosling — Gapminder talks</div><div class="rs">Data visualization of global health trends</div></div></div>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-device-laptop"></i> Online courses</div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-certificate"></i></div><div><div class="rt">Coursera — Epidemiology in Public Health (Johns Hopkins)</div><div class="rs">Highly recommended, free to audit</div></div></div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-certificate"></i></div><div><div class="rt">edX — Epidemics, Pandemics & Outbreaks</div><div class="rs">University of Pittsburgh course</div></div></div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-certificate"></i></div><div><div class="rt">CDC TRAIN — Public health courses</div><div class="rs">Free official CDC epidemiology training</div></div></div>
+    </div>
+  </div>
+
+  <div class="sub-label">Books & podcasts</div>
+  <div class="grid3">
+    <div class="card">
+      <div class="ch4"><i class="ti ti-book"></i> For general readers</div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">The Ghost Map — Steven Johnson</div><div class="rs">John Snow's cholera investigation and the birth of epidemiology</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">Spillover — David Quammen</div><div class="rs">Zoonotic diseases and how pandemics begin</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">The Coming Plague — Laurie Garrett</div><div class="rs">Emerging infectious diseases and global preparedness</div></div></div>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-book"></i> For students & researchers</div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">Modern Epidemiology — Rothman, Greenland & Lash</div><div class="rs">The definitive methodological epidemiology text</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">Epidemiology: An Introduction — Rothman</div><div class="rs">Accessible entry point for students</div></div></div>
+      <div class="ri"><div class="ric"><i class="ti ti-book-2"></i></div><div><div class="rt">Gordis Epidemiology — Celentano & Szklo</div><div class="rs">Widely used in MPH and medical school programs</div></div></div>
+    </div>
+    <div class="card">
+      <div class="ch4"><i class="ti ti-headphones"></i> Podcasts</div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-headphones"></i></div><div><div class="rt">This Week in Epidemiology</div><div class="rs">Weekly epi research and public health news</div></div></div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-headphones"></i></div><div><div class="rt">Public Health on Call (Johns Hopkins)</div><div class="rs">Expert takes on current public health issues</div></div></div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-headphones"></i></div><div><div class="rt">In the Bubble — Andy Slavitt</div><div class="rs">Health policy and pandemic science</div></div></div>
+      <div class="ri"><div class="ric sage"><i class="ti ti-headphones"></i></div><div><div class="rt">CDC Public Health Grand Rounds</div><div class="rs">Official CDC research presentations and webinars</div></div></div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html> 
